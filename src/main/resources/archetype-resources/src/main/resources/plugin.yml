@@ -1,0 +1,16 @@
+name: ${artifactId}
+main: ${package}.${artifactId}
+version: 0.1
+
+commands:
+   command:
+      description: A Command
+      usage: /<command>
+permissions:
+  ${artifactId}.*:
+    description: A description
+    children:
+      ${artifactId}.test: true
+  ${artifactId}.test:
+    description: Test Permission
+    default: op
