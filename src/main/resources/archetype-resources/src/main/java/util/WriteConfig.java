@@ -11,7 +11,7 @@ public class WriteConfig {
         return instance == null ? instance = new WriteConfig() : instance;
     }
 
-    private JavaPlugin plugin;
+    private ${artifactId} plugin;
 
     private WriteConfig() {
         this.plugin = ${artifactId}.getInstance();
