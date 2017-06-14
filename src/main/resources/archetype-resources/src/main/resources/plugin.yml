@@ -1,11 +1,11 @@
 name: ${artifactId}
 main: ${package}.${artifactId}
-version: 0.1
+version: ${version}
 
 commands:
-   command:
-      description: A Command
-      usage: /<command>
+  command:
+    description: A Command
+    usage: /<command>
 permissions:
   ${artifactId}.*:
     description: A description
