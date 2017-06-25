@@ -19,6 +19,7 @@ public class ${artifactId} extends JavaPlugin{
         instance = this;
         this.registerCommands();
         this.registerEvents();
+        VersionCheck.getInstance();
     }
 
     @Override

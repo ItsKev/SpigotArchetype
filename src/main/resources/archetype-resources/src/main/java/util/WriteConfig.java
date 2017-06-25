@@ -1,7 +1,6 @@
 package ${package}.util;
 
 import ${package}.${artifactId};
-import org.bukkit.plugin.java.JavaPlugin;
 
 public class WriteConfig {
 
