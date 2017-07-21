@@ -1,5 +1,7 @@
 package ${package}.util;
 
+import java.util.Calendar;
+
 import ${package}.${artifactId};
 
 import java.util.Calendar;
@@ -20,7 +22,7 @@ public class VersionCheck {
     private VersionCheck() {
         this.plugin = ${artifactId}.getInstance();
         Calendar instance = Calendar.getInstance();
-        instance.set(2017, Calendar.JUNE, 15);
+        instance.set(2017, Calendar.JULY, 20);
         date = instance.getTime();
         this.checkVersion();
     }
