@@ -3,7 +3,7 @@ main: ${package}.${artifactId}
 version: ${version}
 
 commands:
-  command:
+  test:
     description: A Command
     usage: /<command>
 permissions:

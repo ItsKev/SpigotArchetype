@@ -10,17 +10,9 @@ import java.util.concurrent.TimeUnit;
 
 public class VersionCheck {
 
-    private static VersionCheck instance;
-
-    public static VersionCheck getInstance() {
-        return instance == null ? instance = new VersionCheck() : instance;
-    }
-
-    private ${artifactId} plugin;
     private Date date;
 
-    private VersionCheck() {
-        this.plugin = ${artifactId}.getInstance();
+    public VersionCheck() {
         Calendar instance = Calendar.getInstance();
         instance.set(2017, Calendar.JULY, 20);
         date = instance.getTime();

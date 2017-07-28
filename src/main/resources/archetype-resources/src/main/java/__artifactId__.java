@@ -4,6 +4,8 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import ${package}.util.ConfigManager;
 import ${package}.util.VersionCheck;
+import ${package}.commands.TestCommand;
+import ${package}.events.PlayerEvents;
 
 /**
  * Main class of the ${artifactId} plugin
@@ -17,6 +19,7 @@ public class ${artifactId} extends JavaPlugin {
     public static ${artifactId} getInstance() {return instance;}
 
     private ConfigManager configManager;
+    private boolean debugMode = false;
 
     @Override
     public void onEnable() {
@@ -24,7 +27,7 @@ public class ${artifactId} extends JavaPlugin {
         this.configManager = new ConfigManager();
         this.registerCommands();
         this.registerEvents();
-        VersionCheck.getInstance();
+        new VersionCheck();
     }
 
     @Override
@@ -32,16 +35,22 @@ public class ${artifactId} extends JavaPlugin {
     }
 
     public ConfigManager getConfigManager() {
-        return configManager;
+        return this.configManager;
+    }
+
+    public void logMessage(Object object){
+        if(debugMode){
+            this.getLogger().info(object.toString());
+        }
     }
 
     private void registerCommands() {
-        //this.getCommand("test").setExecutor(new ${artifactId}Commands());
+        this.getCommand("test").setExecutor(new TestCommand());
         //this.getCommand("test").setTabCompleter(new TabComplete());
     }
 
     private void registerEvents() {
-        PluginManager pm = getServer().getPluginManager();
-        //pm.registerEvents(new PortalEvent(), this);
+        PluginManager pm = this.getServer().getPluginManager();
+        pm.registerEvents(new PlayerEvents(), this);
     }
 }

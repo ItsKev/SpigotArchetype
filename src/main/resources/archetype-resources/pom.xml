@@ -29,7 +29,7 @@
                         <phase>package</phase>
                         <configuration>
                             <tasks>
-                                <copy file="target//${project.artifactId}-${project.version}.jar" todir="C:/Users/kevin/Desktop/TestServerSpigot/plugins" />
+                                <copy file="target//${project.artifactId}-${project.version}.jar" todir="D:/MinecraftTestServer/1_11_2/plugins" />
                             </tasks>
                         </configuration>
                         <goals>
