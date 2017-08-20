@@ -11,6 +11,7 @@
         <source>src/main/java/nms/NMSUtils1_11.java</source>
         <source>src/main/java/commands/TestCommand.java</source>
         <source>src/main/java/events/PlayerEvents.java</source>
+        <source>src/test/java/events/PlayerEventsTest.java</source>
     </sources>
     <resouces>
         <resource>src/main/resources/plugin.yml</resource>

@@ -10,6 +10,9 @@ public class PlayerEvents implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event){
         Player player = event.getPlayer();
+        if (player.getName().startsWith("D")) {
+            player.sendMessage("Welcome to the server!");
+        }
     }
 
 }

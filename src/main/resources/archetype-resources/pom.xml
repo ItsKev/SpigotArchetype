@@ -37,7 +37,8 @@
                         <phase>package</phase>
                         <configuration>
                             <tasks>
-                                <copy file="target//${project.artifactId}-${project.version}.jar" todir="D:/MinecraftTestServer/${project.artifactId}/plugins" />
+                                <copy file="target//${project.artifactId}-${project.version}.jar"
+                                      todir="D:/MinecraftTestServer/${project.artifactId}/plugins"/>
                             </tasks>
                         </configuration>
                         <goals>
@@ -76,6 +77,21 @@
             <version>1.11.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-    </dependencies>
 
+        <!-- PowerMock -->
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-module-junit4</artifactId>
+            <version>1.6.5</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Mockito -->
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-api-mockito</artifactId>
+            <version>1.6.5</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>
